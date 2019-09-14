@@ -1,5 +1,7 @@
 # tzuchi
 
+- website for Tzu Chi Bohol
+
 ## Setup
 
 #### Prerequisites
