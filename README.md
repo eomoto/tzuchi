@@ -64,10 +64,31 @@
 
 `rake db:migrate`
 
-#### Developer Configurations
+#### Developer Configurations (TODO)
 
-## Services
+#### Running the project
+
+- run a development server
+
+`rails s`, include `-p PORT_NUMBER` to specify a port
+
+- open a console to interact with the project
+
+`rails c`
+
+## Services (TODO)
 
 ## Testing
 
-## Deployment
+- setup a test db
+
+`rake db:create RAILS_ENV=test`
+
+- migrate the test db
+
+`rake db:migrate RAILS_ENV=test`
+
+- run tests
+`rails test`
+
+## Deployment (TODO)
