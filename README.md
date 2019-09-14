@@ -1,24 +1,49 @@
-# README
+# tzuchi
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Setup
 
-Things you may want to cover:
+#### Prerequisites
 
-* Ruby version
+- make sure you have xcode tools installed
+`xcode-select --install`
 
-* System dependencies
+- install gpg
+`brew install gpg`
 
-* Configuration
+- install the security key for rvm
+`command curl -sSL https://rvm.io/mpapis.asc | gpg --import -`
 
-* Database creation
+- install rvm
+`\curl -L https://get.rvm.io | bash -s stable`
 
-* Database initialization
+- install ruby version
+`rvm install 2.6.4`
 
-* How to run the test suite
+- set rvm to use 2.6.4 by default (optional)
+`rvm use --default 2.6.4`
 
-* Services (job queues, cache servers, search engines, etc.)
+- install mysql
+`brew install mysql`
 
-* Deployment instructions
+- or upgrade mysql if you need to
+`brew upgrade mysql`
 
-* ...
+- make sure that you start mysql
+`brew services start mysql`
+
+#### Installing Project
+
+- clone repo
+`git clone THIS_REPO`
+
+- install bundler
+`gem install bundler`
+
+- install gems
+`bundle install`
+
+- create your db
+`rake db:create`
+
+- migrate your db
+`rake db:migrate`
