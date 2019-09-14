@@ -63,3 +63,11 @@
 - migrate your db
 
 `rake db:migrate`
+
+#### Developer Configurations
+
+## Services
+
+## Testing
+
+## Deployment
