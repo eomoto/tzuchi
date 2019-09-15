@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_09_15_004350) do
+ActiveRecord::Schema.define(version: 2019_09_15_013736) do
 
   create_table "articles", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.string "title"
@@ -22,6 +22,7 @@ ActiveRecord::Schema.define(version: 2019_09_15_004350) do
     t.datetime "published_at"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.text "image_data"
     t.index ["status"], name: "index_articles_on_status"
     t.index ["tags"], name: "index_articles_on_tags"
   end
