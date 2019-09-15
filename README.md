@@ -76,7 +76,10 @@
 
 `rake db:migrate`
 
-#### Developer Configurations (TODO)
+#### Developer Configurations
+
+- setup a new admin user
+`rake admin:create`
 
 #### Running the project
 
