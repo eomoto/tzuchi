@@ -42,6 +42,18 @@
 
 `brew services start mysql`
 
+- install webpacker
+
+`rails webpacker:install`
+
+- install foreman
+
+`gem install foreman`
+
+- install bootstrap
+
+`yarn add bootstrap@4.3.1 jquery popper.js`
+
 #### Installing Project
 
 - clone repo
@@ -68,13 +80,13 @@
 
 #### Running the project
 
-- install webpacker
-
-`rails webpacker:install`
-
 - run a development server
 
 `rails s`, include `-p PORT_NUMBER` to specify a port
+
+- run foreman
+
+`foreman start -f Procfile.dev`
 
 - open a console to interact with the project
 
