@@ -12,9 +12,8 @@
   </head>
 
   <body>
-    <% if current_user && current_user.is_admin? %>
-      <%= link_to("Admin", rails_admin_path) %>
-    <% end %>
+    <%= render "layouts/header" %>
     <%= yield %>
+    <%= render "layouts/footer" %>
   </body>
 </html>
