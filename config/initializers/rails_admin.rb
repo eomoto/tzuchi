@@ -42,4 +42,12 @@ RailsAdmin.config do |config|
     # history_index
     # history_show
   end
+
+  config.model 'Article' do
+    edit do
+      configure :published_at do
+        hide
+      end
+    end
+  end
 end
