@@ -68,6 +68,10 @@
 
 #### Running the project
 
+- install webpacker
+
+`rails webpacker:install`
+
 - run a development server
 
 `rails s`, include `-p PORT_NUMBER` to specify a port
@@ -80,11 +84,9 @@
 
 ## Testing
 
-- setup a test db
+- setup a test db & migrate if you don't already have one setup
 
 `rake db:create RAILS_ENV=test`
-
-- migrate the test db
 
 `rake db:migrate RAILS_ENV=test`
 
