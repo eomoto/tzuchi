@@ -1,0 +1,7 @@
+<p><%= link_to("Home", root_path) %></p>
+<h1>Number of Articles: <%= @articles.count %></h1>
+<ul>
+  <% @articles.each do |article| %>
+    <li><%= link_to(article.title, article_path(article.id)) %></li>
+  <% end %>
+</ul>
