@@ -95,8 +95,6 @@
 
 `rails c`
 
-## Services (TODO)
-
 ## Testing
 
 - setup a test db & migrate if you don't already have one setup
