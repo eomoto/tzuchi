@@ -111,3 +111,8 @@
 `rails test`
 
 ## Deployment (TODO)
+
+## Notes
+
+- add new stylesheets in `app/javascript/stylesheets` and link them in `app/javascript/stylesheets/application.scss`
+- add new js in `app/javascript/packs` and link them in `app/javascript/packs/application.js`
