@@ -30,11 +30,51 @@ RailsAdmin.config do |config|
   config.actions do
     dashboard                     # mandatory
     index                         # mandatory
-    new
+    new do
+      controller do
+        proc do
+          if request.post? && params[@abstract_model.param_key].present?
+            @object = @abstract_model.new
+            attributes = params[@abstract_model.param_key]
+
+            if attributes[:status].to_i == Article.statuses[:published]
+              attributes[:published_at] = Time.now
+            end
+
+            attributes = attributes.permit(:title, :description, :author, :status, :body, :published_at, :tags)
+            @object.set_attributes(attributes)
+
+            @object.save!
+          elsif request.get?
+            @object = @abstract_model.new
+          end
+        end
+      end
+    end
     export
     bulk_delete
     show
-    edit
+    edit do
+      controller do
+        proc do
+          if request.put?
+            attributes = params[@abstract_model.param_key]
+            new_status = attributes[:status].to_i
+
+            if new_status == Article.statuses[:draft]
+              attributes[:published_at] = nil
+            elsif Article.statuses[@object.status] != new_status
+              attributes[:published_at] = Time.now
+            end
+
+            attributes = attributes.permit(:title, :description, :author, :status, :body, :published_at, :tags)
+            @object.set_attributes(attributes)
+
+            @object.save!
+          end
+        end
+      end
+    end
     delete
     show_in_app
 
