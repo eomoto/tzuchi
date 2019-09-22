@@ -1,21 +1,14 @@
 class Article < ApplicationRecord
   include Shrine::Attachment.new(:image)
 
+  has_rich_text :body
+
   enum tags: {}
   enum status: {
     draft: 0,
     published: 1
   }
 
-  validates :title, :body, presence: true
+  validates_presence_of :title, :description, :author, :status, :body
 
-  after_save :set_published_at
-
-  def set_published_at
-    if self.draft? && self.published_at.present?
-      self.update_attributes(published_at: nil)
-    elsif self.published? && self.published_at.nil?
-      self.update_attributes(published_at: Time.now)
-    end
-  end
 end
