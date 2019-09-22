@@ -83,7 +83,7 @@
 
 #### Running the project
 
-- run a development server
+- run a development server at localhost:PORT_NUMBER
 
 `rails s`, include `-p PORT_NUMBER` to specify a port
 
