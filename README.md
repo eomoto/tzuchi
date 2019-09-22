@@ -46,6 +46,10 @@
 
 `rails webpacker:install`
 
+- install action text
+
+`rails action_text:install`
+
 - install foreman
 
 `gem install foreman`
