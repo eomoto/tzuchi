@@ -83,6 +83,7 @@
 #### Developer Configurations
 
 - setup a new admin user
+
 `rake admin:create`
 
 #### Running the project
@@ -108,6 +109,7 @@
 `rake db:migrate RAILS_ENV=test`
 
 - run tests
+
 `rails test`
 
 ## Deployment Setup
