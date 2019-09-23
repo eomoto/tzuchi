@@ -137,7 +137,7 @@
 
 - deploy to heroku
 
-`git push heroku production`
+`git push heroku production:master`
 
 - migrate db (if necessary)
 
