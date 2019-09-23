@@ -41,8 +41,17 @@ RailsAdmin.config do |config|
               attributes[:published_at] = Time.now
             end
 
-            attributes = attributes.permit(:title, :description, :author, :status, :body, :published_at, :tags)
-            @object.set_attributes(attributes)
+            permitted_attributes = attributes.permit(
+              :title,
+              :description,
+              :author,
+              :status,
+              :body,
+              :published_at,
+              :tags,
+              :image
+            )
+            @object.set_attributes(permitted_attributes)
 
             @object.save!
           elsif request.get?
@@ -67,8 +76,17 @@ RailsAdmin.config do |config|
               attributes[:published_at] = Time.now
             end
 
-            attributes = attributes.permit(:title, :description, :author, :status, :body, :published_at, :tags)
-            @object.set_attributes(attributes)
+            permitted_attributes = attributes.permit(
+              :title,
+              :description,
+              :author,
+              :status,
+              :body,
+              :published_at,
+              :tags,
+              :image
+            )
+            @object.set_attributes(permitted_attributes)
 
             @object.save!
           end

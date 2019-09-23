@@ -4,9 +4,7 @@ require "date"
 
 describe Shrine::Storage::GoogleDriveStorage do
   def google_drive_storage(options = {})
-    Shrine::Storage::GoogleDriveStorage.new({ 
-        drive_public_folder_id: '17Vz1HBcJjasJmo8sCt8vKmda92Ayk3cw'
-      })
+    Shrine::Storage::GoogleDriveStorage.new()
   end
 
   before do
@@ -23,5 +21,4 @@ describe Shrine::Storage::GoogleDriveStorage do
   it "passes the linter" do
     Shrine::Storage::Linter.new(google_drive_storage).call(-> { image })
   end
-
 end
