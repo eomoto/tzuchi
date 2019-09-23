@@ -86,6 +86,15 @@
 
 `rake admin:create`
 
+- setup *.env*
+
+`cp .env.sample .env`
+
+- fill in *.env* with appropriate varaibles
+
+- save `client_secret.json` from google drive in root of project
+  - NOTE: for now we use the production folder as our development folder but if there is going to be more robust development then separate the two environments.
+
 #### Running the project
 
 - run a development server at localhost:PORT_NUMBER

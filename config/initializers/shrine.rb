@@ -1,9 +1,9 @@
 require "shrine"
-require "shrine/storage/file_system"
+require "shrine/storage/google_drive_storage"
 
 Shrine.storages = {
-  cache: Shrine::Storage::FileSystem.new("public", prefix: "uploads/cache"), # temporary
-  store: Shrine::Storage::FileSystem.new("public", prefix: "uploads/"),       # permanent
+  store: Shrine::Storage::GoogleDriveStorage.new,
+  cache: Shrine::Storage::GoogleDriveStorage.new,
 }
 
 Shrine.plugin :activerecord
