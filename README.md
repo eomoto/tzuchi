@@ -160,4 +160,4 @@
 
 - run rake commands
 
-`heroku run rake RAKE_NAMESPACE:RAKE_TASK`
+`heroku run rake RAKE_TASK`
