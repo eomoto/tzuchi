@@ -9,6 +9,6 @@ class Article < ApplicationRecord
     published: 1
   }
 
-  validates_presence_of :title, :description, :author, :status, :body
+  validates :title, :description, :author, :status, :body, presence: true
 
 end
