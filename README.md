@@ -110,9 +110,43 @@
 - run tests
 `rails test`
 
-## Deployment (TODO)
+## Deployment Setup
+
+- setup heroku
+
+`brew tap heroku/brew && brew install heroku`
+
+- setup heroku cli, use heroku credentials
+
+`heroku login`
+
+## Deployment
+
+- deploy to heroku
+
+`git push heroku master`
+
+- migrate db (if necessary)
+
+`heroku run rake db:migrate`
+
+- open app from console
+
+`heroku open`
 
 ## Notes
 
 - add new stylesheets in `app/javascript/stylesheets` and link them in `app/javascript/stylesheets/application.scss`
 - add new js in `app/javascript/packs` and link them in `app/javascript/packs/application.js`
+
+- check heroku logs
+
+`heroku logs`
+
+- open heroku console
+
+`heroku run rails console`
+
+- run rake commands
+
+`heroku run rake RAKE_NAMESPACE:RAKE_TASK`
