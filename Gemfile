@@ -9,8 +9,8 @@ gem 'rails', '~> 6.0.0'
 gem 'rails_admin'
 # authentication
 gem 'devise'
-# Use mysql as the database for Active Record
-gem 'mysql2', '>= 0.4.4'
+# Use postgresql as the database for Active Record
+gem 'pg', '~> 1.1.4'
 # Use Puma as the app server
 gem 'puma', '~> 3.11'
 # Use SCSS for stylesheets

@@ -30,17 +30,17 @@
 
 `rvm use --default 2.6.4`
 
-- install mysql
+- install postgres
 
-`brew install mysql`
+`brew install postgres`
 
-- or upgrade mysql if you need to
+- or upgrade postgres if you need to
 
-`brew upgrade mysql`
+`brew upgrade postgres`
 
-- make sure that you start mysql
+- make sure that you start postgres
 
-`brew services start mysql`
+`brew services start postgres`
 
 - install webpacker
 
