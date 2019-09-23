@@ -26,8 +26,6 @@
 # Ignore local development environment variables
 /.env
 
-/client_secret.json
-
 /public/uploads
 /public/packs
 /public/packs-test
