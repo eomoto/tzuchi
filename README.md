@@ -133,9 +133,11 @@
 
 ## Deployment
 
+- merge `master` into `production`
+
 - deploy to heroku
 
-`git push heroku master`
+`git push heroku production`
 
 - migrate db (if necessary)
 
