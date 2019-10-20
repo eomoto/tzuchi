@@ -46,6 +46,10 @@
 
 `sudo gem install rails`
 
+- install yarn
+
+`brew install yarn`
+
 - install bootstrap
 
 `yarn add bootstrap@4.3.1 jquery popper.js`
