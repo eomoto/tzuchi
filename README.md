@@ -44,7 +44,7 @@
 
 - install rails
 
-`brew install rails`
+`sudo gem install rails`
 
 - install webpacker
 
