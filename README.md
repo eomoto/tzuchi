@@ -46,6 +46,16 @@
 
 `sudo gem install rails`
 
+- install bootstrap
+
+`yarn add bootstrap@4.3.1 jquery popper.js`
+
+#### Installing Project
+
+- clone repo
+
+`git clone THIS_REPO`
+
 - install webpacker
 
 `rails webpacker:install`
@@ -57,16 +67,6 @@
 - install foreman
 
 `gem install foreman`
-
-- install bootstrap
-
-`yarn add bootstrap@4.3.1 jquery popper.js`
-
-#### Installing Project
-
-- clone repo
-
-`git clone THIS_REPO`
 
 - install bundler
 
