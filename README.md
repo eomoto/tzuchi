@@ -42,6 +42,10 @@
 
 `brew services start postgres`
 
+- install rails
+
+`brew install rails`
+
 - install webpacker
 
 `rails webpacker:install`
