@@ -5,6 +5,7 @@ class ArticlesControllerTest < ActionDispatch::IntegrationTest
     get articles_url
     assert_response :success
   end
+
   test "should get article show" do
     article = Article.create!(
       description: "Test Description",
