@@ -1,9 +1,4 @@
-<% if current_user && current_user.is_admin? %>
-  <%= link_to("Admin", rails_admin_path) %>
-<% end %>
-
-
-  <!-- Navigation -->
+	<!-- Navigation -->
   <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark fixed-top">
     <div class="container">
       <a class="navbar-brand" href="index.html">Start Bootstrap</a>
@@ -12,6 +7,11 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto">
+         	<% if current_user && current_user.is_admin? %>
+          <li class="nav-item">
+           <%= link_to("Admin", rails_admin_path, :class => "nav-link") %>
+          </li>         
+          <% end %>         
           <li class="nav-item">
             <a class="nav-link" href="about.html">About</a>
           </li>
